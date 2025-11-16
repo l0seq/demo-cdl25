@@ -1,0 +1,41 @@
+{
+  "name": "demo-cdl2025",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build"
+  },
+  "dependencies": {
+    "@types/pouchdb-browser": "^6.1.5",
+    "@types/slug": "^5.0.9",
+    "events": "^3.3.0",
+    "pinia": "^3.0.3",
+    "pouchdb": "^9.0.0",
+    "pouchdb-browser": "^9.0.0",
+    "pouchdb-find": "^9.0.0",
+    "slug": "^11.0.1",
+    "vue": "^3.5.22",
+    "vue3-pouch": "^0.0.11"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.2",
+    "@types/node": "^22.18.11",
+    "@types/pouchdb": "^6.4.2",
+    "@types/pouchdb-find": "^7.3.3",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.8.1",
+    "npm-run-all2": "^8.0.4",
+    "typescript": "~5.9.0",
+    "vite": "npm:rolldown-vite@latest",
+    "vite-plugin-vue-devtools": "^8.0.3",
+    "vue-tsc": "^3.1.1"
+  }
+}
