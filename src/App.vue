@@ -23,7 +23,10 @@ type Database = Item | Column
 
 const database = new PouchDB<Database>("todo-list-cdl")
 
-database.sync(import.meta.env.VITE_COUCH_URL)
+database.sync(import.meta.env.VITE_COUCH_URL, {
+  live: true,
+  retry: true
+})
 
 const columns = usePouchRef<Column, Database>({
   selector: {
